@@ -1,0 +1,5 @@
+FROM alpine:3.20.2
+LABEL maintainer="Nho Luong <luongutnho@hotmail.com>"
+RUN apk add ca-certificates
+COPY redis-dump-go /
+ENTRYPOINT ["/redis-dump-go"]
